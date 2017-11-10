@@ -69,62 +69,20 @@
     text-shadow: -2px -2px #000;
     text-align: center;
     position: relative;
-    top:0;
-    /*display: none;*/
-    /*transform-style: preserve-3d;*/
-    /*transform-origin: center center -550px;*/
-    /*transition: all 1s linear;*/
+    left:33px;
 }
-@-webkit-keyframes flipInY {
-    from {
-        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    }
-
-    to {
-        -webkit-transform: perspective(400px);
-        transform: perspective(400px);
-    }
-}
-.flipInY {
-    -webkit-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-    -webkit-animation-name: flipInY;
-    animation-name: flipInY;
-}
-@keyframes show {
+@keyframes show1 {
     0%{
-        transform: rotate(0);
+        left:-1000px;
     }
     100%{
-        transform: rotate(360deg);
+        left:33px;
     }
 }
-.show{
+.show1{
     display: block;
-    /*animation: show 1.5s cubic-bezier(0.250, 0.250, 0.750, 0.750);*/
-    animation: show 1.5s linear;
+    animation: show1 1s cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    /*animation: show1 1.5s linear;*/
 }
 .mask1 p{
     font-size: 27px;
@@ -139,7 +97,19 @@
     text-transform: capitalize;
     margin-bottom: 5%;
     text-align: center;
-
+    position: relative;
+    right:20px;
+}
+@keyframes show2 {
+    0%{
+        right:-1000px;
+    }
+    100%{
+        right:100px;
+    }
+}
+.show2{
+    animation: show2 1s linear;
 }
 .hire{
     display: block;
@@ -151,8 +121,10 @@
     font-size: 20px;
     text-align: center;
     line-height: 58px;
-
+    opacity: 0;
+    transition: all 3s;
 }
+
 .hire:hover{
     background-color: #35405f;
     color: #fff;
@@ -186,7 +158,7 @@
 }
 .second h1{
     font-size: 70px;
-    margin-top: 8%;
+    /*margin-top: 8%;*/
     margin-bottom: 15px;
     font-weight: 400;
     /*font-family: 'Rouge Script', cursive;*/
@@ -196,13 +168,28 @@
     word-spacing: 6px;
     text-shadow: -2px -2px #000;
     text-align: center;
+    position: relative;
+    top:9%;
+    display: none;
+}
+@keyframes show3 {
+    0%{
+        top:-100px;
+    }
+    100%{
+        top:9%;
+    }
+}
+.show3{
+    animation: show3 1s linear;
 }
 .second ul{
     width: 100%;
     height: 210px;
     /*background-color: #0f33ff;*/
-    margin-top: 5%;
+    margin-top: 11%;
     padding:0 8%;
+    display: none;
 }
 .second li{
     width: 25%;
@@ -216,9 +203,9 @@
     align-content: center;
     text-align: center;
 }
-.second .li1{
-    display: none;
-}
+/*.second .li1{*/
+    /*display: none;*/
+/*}*/
 
 .second img{
     width: auto;
@@ -369,6 +356,9 @@
     justify-content: center;
 
 }
+.mask4 #li6{
+    border: 0;
+}
 .mask4 h5{
     font-size: 22px;
     color: rgb(234, 234, 234);
@@ -439,6 +429,7 @@
     /*background-color: #c9c9c9;*/
     padding: 20px;
     padding-top: 10px;
+    margin-top: 10px;
 
 }
 .fifth-left{
@@ -447,14 +438,19 @@
     /*background-color: #ffac13;*/
     float: left;
     padding: 10px;
+    display: none;
 }
 .fifth-left input{
     width: 100%;
     height: 50px;
     background-color: transparent;
     border:1px #fff solid;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     padding: 0 10px;
+    /*display: none;*/
+}
+#email{
+    margin-bottom: 30px;
 }
 #submit{
     font-size: 20px;
@@ -478,7 +474,7 @@ input::placeholder{
     background-color: transparent;
     border:1px #fff solid;
     padding: 10px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 
 }
 textarea::placeholder{
@@ -493,6 +489,7 @@ textarea::placeholder{
     padding: 10px;
     padding-left: 30px;
     padding-top: 40px;
+    display: none;
 }
 .address{
     width: 100%;
@@ -539,3 +536,4 @@ textarea::placeholder{
     position: absolute;
     top:30px;
 }
+
