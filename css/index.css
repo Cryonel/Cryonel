@@ -174,8 +174,8 @@
 }
 @keyframes show3 {
     0%{
-        top:-100px;
-    }
+          top:-100px;
+      }
     100%{
         top:9%;
     }
