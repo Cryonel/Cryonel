@@ -1,2 +1,0 @@
-# Cryonel
-JS评审
